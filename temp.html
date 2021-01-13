@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C to F</title>
+</head>
+<body>
+    <label for="cars">Choose a number:</label>
+    <input type="text" id="number">
+    <select id="temperature">
+        <option value="C">Cl</option>
+        <option value="F">Fer</option>
+    </select><br>
+    <button type="submit" id="convert" onclick="temp()">Convert</button>
+
+    <script>
+        function temp(){
+            let temp1= document.getElementById("number").value;
+            let tempid=document.getElementById("temperature");
+            
+            if(tempid.value=='C'){
+            var newTemp= (temp1 * 1.8)+32;
+            console.log(newTemp);
+            }else{
+            var ftemp = (temp1 - 32) * 0.55;
+            console.log(ftemp);
+       }
+    }
+    </script>
+</body>
+</html>
